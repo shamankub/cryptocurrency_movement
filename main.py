@@ -61,7 +61,9 @@ async def analyze_futures_prices(symbol: str) -> str:
     price_change = max(max_price, min_price)
 
     if price_change >= threshold:
-        return f"Цена {symbol} изменилась на {price_change:.2%} за последний час. Зависимость от цены BTC/USDT {r_squared_description(r_squared)}. (r_squared = {r_squared:.2f})"
+        return f"Цена {symbol} изменилась на {price_change:.2%} за последний час. "\
+            f"Зависимость от цены BTC/USDT {r_squared_description(r_squared)}. "\
+            f"(r_squared = {r_squared:.2f})"
 
 
 async def run():
